@@ -42,13 +42,11 @@ Please read the whole installation process before doing so.
 
 NOTE: 
 
-If you are using mikrotik haplite, you may be running out of space when uploading all the theme files. I suggest that you create a backup copy of the hotspot theme files and delete the hotspot directory but do not include the xml directory. As for the moment we do not have a light weight version for this theme, but someday we will have one.
-
 THE RISK IS YOURS, I suggest that you create a backup copy of your recent settings.
 
 SYSTEM REQUIREMENT:
 
-Mikrotik Hex or any Mikrotik which supports MicroSD for hosting the theme files.
+Mikrotik Hex and Haplite or any Mikrotik which supports MicroSD for hosting the theme files.
 
 1. Login to Mikrotik Router using winbox
 2. Go to Files
