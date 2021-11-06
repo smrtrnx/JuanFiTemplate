@@ -74,10 +74,6 @@ Mikrotik Hex and Haplite or any Mikrotik which supports MicroSD for hosting the 
 
 * smrtrnx https://github.com/smrtrnx/JuanFiTemplate, Designer / Frontend Developer is licensed under GNU GENERAL PUBLIC LICENSE
 
-* normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
-
 * Bootstrap 5 by twitter is Licensed under the MIT License. https://github.com/twbs/bootstrap/blob/master/LICENSE.
-
-* material-design-iconic-font.min.css by Material Design Iconic Font is Licensed under the MIT License. http://zavoloklom.github.io/material-design-iconic-font/license.html
 
 * jquery.min.js OpenJS Foundation and JQuery https://openjsf.org/, JQuery License https://jquery.org/license/  
