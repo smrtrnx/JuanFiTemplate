@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Welcome to JuanFi</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body id="loginBody">
+
+	$(if chap-id)
+    <form name="sendin" action="$(link-login-only)" method="post" style="display:none">
+        <input type="hidden" name="username" />
+        <input type="hidden" name="password" />
+        <input type="hidden" name="dst" value="$(link-orig)" />
+        <input type="hidden" name="popup" value="true" />
+    </form>
+
+    <script>
+        var mac = "$(mac)";
+		var uIp = "$(ip)";
+        var ImOnLogin = "1";
+        var ImOnStatus = "0";
+		var alertVoucher = "0";
+		var loginError = "";
+
+        function doLogin() {
+			var vc = $("#voucherInput").val();
+			setStorageValue("activeVoucher", vc);
+			removeStorageValue("totalCoinReceived");
+			var validity = getStorageValue(vc+"validity");
+			var tempValidity = getStorageValue(vc+"tempValidity");
+			if(tempValidity != null){
+				var currentExpireDate = new Date();
+				if(validity != null){
+					currentExpireDate = new Date(parseInt(validity));
+				}
+				var minutes = parseInt(tempValidity);
+				var expireDate = new Date(currentExpireDate.getTime() + minutes*60000);
+				setStorageValue(vc+"validity", expireDate.getTime()+"");
+				removeStorageValue(vc+"tempValidity");
+			}
+            document.sendin.username.value = vc;
+			if(loginOption == 0){
+				document.sendin.password.value = hexMD5('$(chap-id)' + "" + '$(chap-challenge)');
+			}else{
+				document.sendin.password.value = hexMD5('$(chap-id)' + vc + '$(chap-challenge)');
+			}
+            document.sendin.submit();
+            return false;
+        }
+    </script>
+	$(endif)
+
+	$(if error)
+	<script>
+        loginError = "$(error)";
+    </script>
+	$(endif)
+
+    <div class="container"><!--CONTAINER-->
+        <div class="row"><!--ROW-->
+            <div class="col-lg-4 mx-auto"><!--COLUMN-->
+
+			<section class="wrapper"><!--WRAPPER-->
+                <div class="login"><!--LOGIN-->	
+					<h3 class="mb-3">Welcome Guest!</h3>
+					<figure class="card shadow-none w-100"><!--LOGO-->
+							<img src="/dist/assets/images/juanfi.webp" class="card-img-top" alt="JuanFi Logo">
+					</figure><!--LOGO-->
+
+					<section class="card-body mt-0"><!--CLIENT INFO-->
+						<ul class="list-group list-group-horizontal-md text-wrap w-100">
+							<li><i class="bi bi-geo-alt-fill"></i>$(ip)</li>
+							<li><i class="bi bi-pc-display"></i>$(mac)</li>
+						</ul>
+					</section><!--CLIENT INFO-->
+
+					<section id="vendoSelectDiv">
+						<label for="exampleFormControlSelect2">Select Vendo: </label>
+						<select class="form-control" name="vendoSelected" id="vendoSelected"></select>
+					</section>
+					<!--STATUS-->
+					<section id="status-disconnected">
+						<button type="button" class="btn shadow-none w-100" disabled="disabled"><i class="bi bi-wifi-off"></i>DISCONNECTED</button>
+					</section>
+					<!--STATUS-->					
+					
+					<!--INSERT COIN-->
+					<section id="insertcoin">
+						<button type="button" onclick="insertBtnAction(); return false" class="btn wiggle shadow-none w-100" data-bs-toggle="modal" data-bs-target="#insertCoin">INSERT COIN</button>
+
+						<div class="modal fade" id="insertCoinModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="insertCoinModalTitle" aria-hidden="true"><!--MODAL FADE-->
+						
+						<div class="modal-dialog modal-dialog-centered"><!--MODAL DIALOG-->
+						<div class="modal-content"><!--MODAL CONTENT-->
+						<div class="modal-header"><!--MODAL HEADER-->
+							<h5 class="modal-title" id="staticBackdropLabel">PLEASE INSERT COIN</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							
+						</div><!--MODAL HEADER-->
+
+						<div class="modal-body"><!--INSCOIN MODAL BODY-->
+						<div class="progress"><!--PROGRESS BAR-->
+							<div id="progressDiv" class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+						</div><!--PROGRESS BAR-->
+										
+						<section class="container"><!--INSCOIN-->
+
+							<table class="table"><!--TABLE-->
+								<thead><!--THEAD-->
+									<tr>
+									  <th scope="col" class="text-center">TRANSACTION INFORMATION</th>
+									</tr>
+								  </thead><!--THEAD-->
+								<tbody><!--TBODY-->
+								  <tr>
+									<td scope="row"><i class="bi bi-qr-code"></i>CODE: <span id="codeGeneratedBlock"><span id="codeGenerated">*****</span></span></td>
+								  </tr>
+								  <tr>
+									<td scope="row"><i class="bi bi-cash-stack"></i>COINS: ₱<span id="totalCoin">0</span>.00</span></td>
+								  </tr>
+								  <tr>
+									<td scope="row" id="dataInfoDiv"><i class="bi bi-broadcast-pin"></i>DATA:<span id="totalData">0</span>MB</td>
+								  </tr>
+								  <tr>
+									<td scope="row"><i class="bi bi-hourglass-split"></i>TIME AVAILED:</td>
+								  </tr>
+								  <tr>
+									<td scope="row" class="text-center" id="totalTime"></td>
+								  </tr>
+								</tbody><!--TBODY-->
+							  </table><!--TABLE-->
+						</section><!--INSCOIN-->
+						</div><!--INSCOIN MODAL BODY-->
+
+						<div class="modal-footer"><!--MODAL FOOTER-->
+							<button type="button" id="saveVoucherButton" onclick="saveVoucherBtnAction(); return false" class="btn btn-primary" data-dismiss="modal">
+								Save and Connect
+							  </button>
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						</div><!--MODAL FOOTER-->
+						</div><!--MODAL CONTENT-->
+						</div><!--MODAL DIALOG-->
+						</div><!--MODAL FADE-->
+					</section>
+					<!--INSERT COIN-->
+
+					<!--PROMORATES-->
+					<section id="promorates">
+						<button type="button" onclick="promoBtnAction(); return false" class="btn shadow-none w-100" data-bs-toggle="modal" data-bs-target="#promoRates">
+							PROMO RATES
+						</button>
+
+						<div class="modal fade" id="promoRatesModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"><!--MODAL FADE-->
+						<div class="modal-dialog modal-dialog-centered"><!--MODAL DIALOG-->
+						<div class="modal-content"><!--MODAL CONTENT-->
+						<div class="modal-header"><!--MODAL HEADER-->
+							<h5 class="modal-title" id="staticBackdropLabel">PROMO RATES</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div><!--MODAL HEADER-->
+						
+						<div class="modal-body"><!--MODAL BODY-->
+							<div class="container"><!--MODAL CONTAINER-->
+								<div class="row"><!--MODAL ROW-->
+									<table class="table">
+										<thead>
+										  <tr>
+											<th scope="col">Rates</th>
+											<th scope="col">Validity(Expiration)</th>
+										  </tr>
+										</thead>
+										<tbody id="ratesBody">
+										  <tr>
+											<td id="totalTime">Rates loading....</td>
+										  </tr>
+										</tbody>
+									  </table>
+								  </div><!--MODAL ROW-->
+							</div><!--MODAL CONTAINER-->
+						</div><!--MODAL BODY-->
+						
+						<div class="modal-footer"><!--MODAL FOOTER-->
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+						</div><!--MODAL FOOTER-->
+
+						</div><!--MODAL CONTENT-->
+						</div><!--MODAL DIALOG-->
+						</div><!--MODAL FADE-->
+					</section>
+					<!--PROMORATES-->				
+
+					<section class="form-group text-center">
+						<input type="voucher" class="form-control shadow-none text-center" id="voucherInput" aria-describedby="voucherHelp" placeholder="ENTER VOUCHER CODE HERE">
+						<section class="row clearfix">
+							<h5 class="text-center">VOUCHER CODE</h5>
+							<!-- <small>or manually enter existing voucher code</small> -->
+						</section>
+					</section>
+					
+					<!--CONNECT-->
+					<section id="connect">
+						<button type="button" onClick="doLogin(); return false" class="btn btn-primary shadow-none w-100">
+							SAVE AND CONNECT
+						</button>
+					</section>
+					<!--CONNECT-->					
+                </div><!--LOGIN-->
+			</section><!--WRAPPER-->
+
+            </div><!--COLUMN-->	
+			
+			<script>
+				var reLogin = getStorageValue('reLogin');
+				if(reLogin == '1'){
+					setStorageValue('reLogin', '0');
+					doLogin();
+				}
+			</script>
+			<script src="/dist/assets/js/bundle.min.js"></script>
+			<!--LOADER-->
+			<div id="loaderDiv" class="spinner hidden">
+				<div class="spinner-grow text-success" role="status">
+					<span class="visually-hidden">Loading...</span>
+				</div>
+			</div>
+			<!--LOADER-->
+		
+		</div><!--ROW-->	
+	</div><!---CONTAINER-->	
+</body>
+</html>

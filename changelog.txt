@@ -1,0 +1,5 @@
+/** CHANGELOG **/
+
+Theme Version: 1.1.0
+Release Date: November 5, 2021
+

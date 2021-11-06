@@ -1,0 +1,16 @@
+/*!
+Theme Name: JuanFi Template
+Theme URI: https://github.com/smrtrnx/JuanFiTemplate
+Author: smrtrnx
+Author URI: https://github.com/smrtrnx/JuanFiTemplate
+Description: JuanFi Hotspot Template is a minimal Bootstrap theme built and design for JuanFi Wifi system using mikrtotik routers. It features your current wifi credits such as time left, extend time, insert coin and login and logout to wifi network. JuanFi Wifi system Mikrotik hotspot template is Responsive theme built in Bootstrap 5 framework.
+Version: 1.1.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Tags: JuanfiTemplate, MikrotikHotspotTemplate, MikrotikHotspot, JuanFi
+This theme is licensed under the GPL.
+
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import url('/dist/assets/css/app.min.css');

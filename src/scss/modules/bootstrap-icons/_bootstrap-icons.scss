@@ -1,0 +1,59 @@
+$bootstrap-icons-font: "bootstrap-icons" !default;
+$bootstrap-icons-font-src: url("/dist/assets/fonts/bootstrap-icons.woff2") format("woff2"),
+url("/dist/assets/fonts/bootstrap-icons.woff") format("woff") !default;
+
+@font-face {
+  font-family: $bootstrap-icons-font;
+  src: $bootstrap-icons-font-src;
+}
+
+@font-face {
+  font-family: 'Faster One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Faster One'),
+    local('FasterOne-Regular'),
+    // url(/dist/assets/fonts/FasterOne-Regular.ttf) format('truetype');
+    url(../fonts/FasterOne-Regular.ttf) format('truetype');
+}
+
+.bi::before,
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  display: inline-block;
+  font-family: $bootstrap-icons-font !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$bootstrap-icons-map: (
+  "geo-alt-fill": "\f3e7",
+  "pc-display": "\f6a6",
+  "qr-code": "\f6ae",
+  "hourglass-split": "\f41f",
+  "stopwatch-fill": "\f596",
+  "broadcast-pin": "\f1d5",
+  "download": "\f30a",
+  "upload": "\f603",
+  "wifi": "\f61c",
+  "wifi-off": "\f61b",  
+  "cash-stack": "\f246",
+);
+
+.bi-geo-alt-fill::before { content: map-get($bootstrap-icons-map, "geo-alt-fill"); }
+.bi-pc-display::before { content: map-get($bootstrap-icons-map, "pc-display"); }
+.bi-qr-code::before { content: map-get($bootstrap-icons-map, "qr-code"); }
+.bi-hourglass-split::before { content: map-get($bootstrap-icons-map, "hourglass-split"); }
+.bi-stopwatch-fill::before { content: map-get($bootstrap-icons-map, "stopwatch-fill"); }
+.bi-broadcast-pin::before { content: map-get($bootstrap-icons-map, "broadcast-pin"); }
+.bi-download::before { content: map-get($bootstrap-icons-map, "download"); }
+.bi-upload::before { content: map-get($bootstrap-icons-map, "upload"); }
+.bi-wifi::before { content: map-get($bootstrap-icons-map, "wifi"); }
+.bi-wifi-off::before { content: map-get($bootstrap-icons-map, "wifi-off"); }
+.bi-cash-stack::before { content: map-get($bootstrap-icons-map, "cash-stack"); }

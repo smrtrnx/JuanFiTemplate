@@ -1,0 +1,287 @@
+//_DESKTOPSTYLE
+//BODY  
+body{
+    // background-image: linear-gradient(to bottom, #d6d6d6, #c9c9c9, #bebebe, #bebebe, #d6d6d6);
+    // background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+//BODY
+
+//VENDO SELECT 
+#vendoSelectDiv {
+	margin-bottom: 20px
+}
+//VENDO SELECT
+
+//WRAPPER
+.wrapper {
+
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin: 20px 0 20px 0;
+	animation: gradient 15s ease infinite;
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .btn {
+        margin-bottom: 20px;
+        border: 1px solid rgb(255, 255, 255);
+        color:rgb(255, 255, 255);
+        font-weight: 500;
+    }
+    & .form-group, h5{
+        color:rgb(58, 55, 55);
+        padding:0;
+        margin-bottom:10px;
+        font-family: 'Faster One', cursive;
+    }
+    & select {
+        margin-bottom: 20px;
+    }
+}
+//WRAPPER
+
+//BUTTONS
+.btn {
+    border-radius: 0!important;
+    border: 1px solid rgb(255, 255, 255);
+}
+//BUTTONS
+
+//FORMS
+.form-control {
+    border-radius: 0!important;
+}
+//FORMS
+
+//MODAL
+.modal-content{color:black;}
+//MODAL
+
+//CARD
+.card {
+    border: 0!important;
+    background: transparent!important;
+}
+//CARD
+
+//STATUS DISCONNECTED
+#status-disconnected>.btn {
+    background-color: rgba(212, 49, 48, 1);
+    border: 1px solid rgb(255, 255, 255);
+    opacity: 100%;
+    .connection-status::after {
+        content: 'wifi_off';
+        font-family: 'Material Icons';
+        vertical-align: -5px;
+        padding-right: 6px;
+        font-size: 24px; 
+        color: white
+    }
+
+    .connection-status-connected::after {
+        content: 'wifi';
+        font-family: 'Material Icons';
+        vertical-align: -5px;
+        padding-right: 6px;
+        font-size: 24px; 
+        color: rgb(255, 255, 255);       
+    }
+}
+//STATUS DISCONNECTED
+
+//STATUS CONNECTED
+#status-connected>.btn {
+    background-color: rgba(26, 164, 19, 1);
+    opacity: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    .connection-status::after {
+        content: 'wifi_off';
+        font-family: 'Material Icons';
+        vertical-align: -5px;
+        padding-right: 6px;
+        font-size: 24px; 
+        color: white
+    }
+
+    .connection-status-connected::after {
+        content: 'wifi';
+        font-family: 'Material Icons';
+        vertical-align: -5px;
+        padding-right: 6px;
+        font-size: 24px; 
+        color: rgb(255, 255, 255);       
+    }
+}
+//STATUS CONNECTED
+
+//INSERT COIN BUTTON
+#insertcoin>.btn {
+    background-color: rgba(42, 171, 192, 1)!important;
+    border: 1px solid rgb(255, 255, 255);
+    -webkit-animation: wiggle 3s infinite;
+    -moz-animation: wiggle 3s infinite;
+    -o-animation: wiggle 3s infinite;
+    animation: wiggle 3s infinite;  
+}
+
+@-webkit-keyframes wiggle {
+	0% {-webkit-transform: rotate(0deg);}
+	2% {-webkit-transform: rotate(-5deg);}
+	3.5% {-webkit-transform: rotate(3deg);}
+	5% {-webkit-transform: rotate(0deg);}
+	10.5% {-webkit-transform: rotate(-5deg);}
+	20% {-webkit-transform: rotate(3deg);}
+	23% {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(0deg);}
+    }
+@-o-keyframes wiggle {
+	0% {-webkit-transform: rotate(0deg);}
+	2% {-webkit-transform: rotate(-5deg);}
+	3.5% {-webkit-transform: rotate(3deg);}
+	5% {-webkit-transform: rotate(0deg);}
+	10.5% {-webkit-transform: rotate(-5deg);}
+	20% {-webkit-transform: rotate(3deg);}
+	23% {-webkit-transform: rotate(0deg)};
+	100% {-webkit-transform: rotate(0deg);}
+    }
+@keyframes wiggle {
+	0% {-webkit-transform: rotate(0deg);}
+	2% {-webkit-transform: rotate(-5deg);}
+	3.5% {-webkit-transform: rotate(3deg);}
+	5% {-webkit-transform: rotate(0deg);}
+	10.5% {-webkit-transform: rotate(-5deg);}
+	20% {-webkit-transform: rotate(3deg);}
+	23% {-webkit-transform: rotate(0deg)};
+	100% {-webkit-transform: rotate(0deg);}
+    }
+//INSERT COIN BUTTON
+
+//PROMORATES BUTTON
+#promorates>.btn {
+    background-color: rgba(239, 105, 34, 1);
+    border: 1px solid rgb(255, 255, 255);
+}
+//PROMORATES BUTTON
+
+//VOUCHER INPUT
+#voucherInput {
+    border: 3px solid rgba(26, 164, 19, 1);
+}
+//VOUCHER INPUT
+
+//CONNECT BUTTON
+#connect>.btn {
+    background-color: rgba(26, 164, 19, 1);
+    border: 1px solid rgb(255, 255, 255)!important;
+    border: 0;
+}
+//CONNECT BUTTON
+
+//CLIENT INFO
+.card-body {
+   font-weight: 600;
+    ul {
+        list-style: none;
+        color: rgb(255, 255, 255);
+        font-weight: 500;
+        display: flex;
+        align-items: stretch; /* Default */
+        justify-content: space-between;
+    }
+
+    li {
+        flex: 0 2 auto; /* Default */
+        list-style-type: none;
+    }
+}
+//CLIENT INFO
+
+//STATUS CONTAINER
+.status {
+    background-color: currentColor;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+//STATUS CONTAINER
+
+//SPINNER
+.spinner { 
+    position: fixed; 
+    z-index: 99; 
+    opacity: 80%; display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; 
+    background: white; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+} 
+.spinner.hidden {
+     animation: fadeOut 1s; animation-fill-mode: forwards;
+     display: none
+}
+//SPINNER
+
+//TOAST
+.toast {
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, 0px);
+    z-index: 9999;
+    background-color: rgb(255, 255, 255)!important;
+}
+//TOAST
+
+//BOOTSTRAP ICONS
+.bi {
+    padding-right: 10px;
+    font-size: 20px;
+    color: rgba(26, 164, 19, 1);
+    &.bi-geo-alt-fill {
+        color:rgb(255, 255, 255);
+    }
+    &.bi-pc-display {
+        color: rgb(255, 255, 255);
+    }
+    &.bi-wifi {
+        color: rgb(255, 255, 255);
+    }
+    &.bi-wifi-off {
+        color: rgb(255, 255, 255);
+    }
+}
+//BOOTSTRAP ICONS

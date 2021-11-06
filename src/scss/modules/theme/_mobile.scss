@@ -1,0 +1,68 @@
+@media (max-width: 767px) { 
+    ul {
+        display: flex;
+    }
+
+    li {
+        flex: 0 2 auto; /* Default */
+        list-style-type: none;
+        justify-content: center!important;
+        margin: 0 auto!important;
+        font-size: 24px!important;
+        .location::before { 
+            content: 'person_pin_circle';
+            font-family: 'Material Icons';
+            font-size: 45px;
+            color:blueviolet
+            
+        }
+        .devices::before {
+            content: 'devices';
+            font-family: 'Material Icons';
+            font-size: 45px;
+        }
+    }    
+}
+
+/**TABLETS LANDSCAPE**/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+    ul {
+        display: flex;
+    }
+    li {
+        .location::before { 
+            content: 'person_pin_circle';
+            font-family: 'Material Icons';
+        }
+        .devices::before {
+            content: 'devices';
+            font-family: 'Material Icons';
+        }
+    }   
+}
+
+/**TABLETS PORTRAIT**/
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+    ul {
+        display: flex;
+        }
+    li {
+        flex: 0 2 auto; /* Default */
+        list-style-type: none;
+        justify-content: center!important;
+        .location::before { 
+            content: 'person_pin_circle';
+            font-family: 'Material Icons';
+        }
+        .devices::before {
+            content: 'devices';
+            font-family: 'Material Icons';
+        }
+    }  
+}
