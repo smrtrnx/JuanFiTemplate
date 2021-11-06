@@ -74,7 +74,7 @@ Mikrotik Hex or any Mikrotik which supports MicroSD for hosting the theme files.
 
 * JuanFi https://github.com/ivanalayan15/JuanFi, ivanalayan15/JuanFi is licensed under the Apache License 2.0 [https://github.com/ivanalayan15/JuanFi/blob/master/LICENSE]
 
-* smrtrnx https://github.com/smrtrnx/mikrotiktemplate, Designer / Frontend Developer is licensed under GNU GENERAL PUBLIC LICENSE
+* smrtrnx https://github.com/smrtrnx/JuanFiTemplate, Designer / Frontend Developer is licensed under GNU GENERAL PUBLIC LICENSE
 
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
 
