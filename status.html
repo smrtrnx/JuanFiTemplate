@@ -26,10 +26,13 @@
             <div class="col-lg-4 mx-auto"><!--COLUMN-->
 				<section class="wrapper"><!--WRAPPER-->
 					<div class="login"><!--LOGIN-->	
-
+					<h3 class="mb-3">Welcome Guest!</h3>
 					<figure class="card shadow-none w-100"><!--LOGO-->
-						<h3 class="mb-3">Welcome Guest!</h3>
-						<img src="/dist/assets/images/juanfi.webp" class="card-img-top" alt="JuanFi Logo">
+						<!-- uncomment this when you are in development mode -->
+						<!-- <img src="/dist/assets/images/juanfi.webp" class="card-img-top" alt="JuanFi Logo"> -->
+
+						<!-- comment this when you are in development mode -->
+						<img src="assets/images/juanfi.webp" class="card-img-top" alt="JuanFi Logo">
 					</figure><!--LOGO-->
 
 					<section class="card-body"><!--CLIENT INFO-->
@@ -231,6 +234,12 @@
 				</section><!--WRAPPER-->
             </div><!--COLUMN-->
 
+			<!-- uncomment the script tag when you are in development mode -->
+			<!-- <script src="/dist/assets/js/bundle.min.js"></script> -->
+
+			<!-- comment this script tag if you are in development mode -->
+			<script src="assets/js/bundle.min.js"></script>
+
 			<script>
 				var sessiontime = "$(session-time-left-secs)";
 				var uptime = "$(uptime-secs)";
@@ -273,7 +282,6 @@
 				$(endif)
 			</script>
 
-			<script src="/dist/assets/js/bundle.min.js"></script>
 			<!--LOADER-->
 			<div id="loaderDiv" class="spinner hidden">
 				<div class="spinner-grow text-success" role="status">

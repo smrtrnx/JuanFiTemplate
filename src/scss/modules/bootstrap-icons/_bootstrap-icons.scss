@@ -1,6 +1,12 @@
 $bootstrap-icons-font: "bootstrap-icons" !default;
-$bootstrap-icons-font-src: url("/dist/assets/fonts/bootstrap-icons.woff2") format("woff2"),
-url("/dist/assets/fonts/bootstrap-icons.woff") format("woff") !default;
+
+// uncomment this when you are in development mode
+// $bootstrap-icons-font-src: url("/dist/assets/fonts/bootstrap-icons.woff2") format("woff2"),
+// url("/dist/assets/fonts/bootstrap-icons.woff") format("woff") !default;
+
+// comment this when you are in development mode
+$bootstrap-icons-font-src: url("../fonts/bootstrap-icons.woff2") format("woff2"),
+url("../fonts/bootstrap-icons.woff") format("woff") !default;
 
 @font-face {
   font-family: $bootstrap-icons-font;

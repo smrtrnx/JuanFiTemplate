@@ -70,7 +70,11 @@
                 <div class="login"><!--LOGIN-->	
 					<h3 class="mb-3">Welcome Guest!</h3>
 					<figure class="card shadow-none w-100"><!--LOGO-->
-							<img src="/dist/assets/images/juanfi.webp" class="card-img-top" alt="JuanFi Logo">
+						<!-- uncomment this when you are in development mode -->
+						<!-- <img src="/dist/assets/images/juanfi.webp" class="card-img-top" alt="JuanFi Logo"> -->
+
+						<!-- comment this when you are in development mode -->
+						<img src="assets/images/juanfi.webp" class="card-img-top" alt="JuanFi Logo">
 					</figure><!--LOGO-->
 
 					<section class="card-body mt-0"><!--CLIENT INFO-->
@@ -214,6 +218,12 @@
 
             </div><!--COLUMN-->	
 			
+			<!-- uncomment the script tag when you are in development mode -->
+			<!-- <script src="/dist/assets/js/bundle.min.js"></script> -->
+
+			<!-- comment this script tag if you are in development mode -->
+			<script src="assets/js/bundle.min.js"></script>
+
 			<script>
 				var reLogin = getStorageValue('reLogin');
 				if(reLogin == '1'){
@@ -221,7 +231,7 @@
 					doLogin();
 				}
 			</script>
-			<script src="/dist/assets/js/bundle.min.js"></script>
+
 			<!--LOADER-->
 			<div id="loaderDiv" class="spinner hidden">
 				<div class="spinner-grow text-success" role="status">

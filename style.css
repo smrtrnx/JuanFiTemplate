@@ -13,4 +13,8 @@ This theme is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-@import url('/dist/assets/css/app.min.css');
+/* uncomment this when you are in development mode */
+/* @import url('/dist/assets/css/app.min.css'); */
+
+/* comment this when you are in development mode */
+@import url('assets/css/app.min.css');

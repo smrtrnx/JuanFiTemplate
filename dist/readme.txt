@@ -36,19 +36,17 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
-== Installation ==
+== INSTALLATION ==
 
 Please read the whole installation process before doing so.
 
 NOTE: 
 
-If you are using mikrotik haplite, you may be running out of space when uploading all the theme files. I suggest that you create a backup copy of the hotspot theme files and delete the hotspot directory but do not include the xml directory. As for the moment we do not have a light weight version for this theme, but someday we will have one.
-
 THE RISK IS YOURS, I suggest that you create a backup copy of your recent settings.
 
 SYSTEM REQUIREMENT:
 
-Mikrotik Hex or any Mikrotik which supports MicroSD for hosting the theme files.
+Mikrotik Hex and Haplite or any Mikrotik which supports MicroSD for hosting the theme files.
 
 1. Login to Mikrotik Router using winbox
 2. Go to Files
@@ -74,12 +72,8 @@ Mikrotik Hex or any Mikrotik which supports MicroSD for hosting the theme files.
 
 * JuanFi https://github.com/ivanalayan15/JuanFi, ivanalayan15/JuanFi is licensed under the Apache License 2.0 [https://github.com/ivanalayan15/JuanFi/blob/master/LICENSE]
 
-* smrtrnx https://github.com/smrtrnx/mikrotiktemplate, Designer / Frontend Developer is licensed under GNU GENERAL PUBLIC LICENSE
-
-* normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
+* smrtrnx https://github.com/smrtrnx/JuanFiTemplate, Designer / Frontend Developer is licensed under GNU GENERAL PUBLIC LICENSE
 
 * Bootstrap 5 by twitter is Licensed under the MIT License. https://github.com/twbs/bootstrap/blob/master/LICENSE.
-
-* material-design-iconic-font.min.css by Material Design Iconic Font is Licensed under the MIT License. http://zavoloklom.github.io/material-design-iconic-font/license.html
 
 * jquery.min.js OpenJS Foundation and JQuery https://openjsf.org/, JQuery License https://jquery.org/license/  
