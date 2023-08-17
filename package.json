@@ -13,7 +13,7 @@
   "author": "smrtrnx",
   "license": "ISC",
   "dependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^3.9.1"
   },
   "exports": {
     "import": "./es6entry.mjs",
@@ -24,19 +24,19 @@
     "bootstrap": "^5.1.3",
     "bootstrap-icons": "^1.7.0",
     "browser-sync": "^2.27.7",
-    "gulp-autoprefixer": "^8.0.0",
-    "gulp-changed": "^4.0.3",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-changed": "^3.2.0",
     "gulp-cleancss": "^0.2.2",
     "gulp-concat": "^2.6.1",
-    "gulp-imagemin": "^8.0.0",
+    "gulp-imagemin": "^4.1.0",
     "gulp-line-ending-corrector": "^1.0.3",
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
     "gulp-sourcemaps": "^3.0.0",
     "gulp-terser": "^2.1.0",
-    "gulp-webp": "^4.0.1",
-    "node-sass": "^6.0.1",
+    "gulp-webp": "^4.0.0",
+    "node-sass": "^9.0.0",
     "sass": "^1.43.4"
   }
 }
